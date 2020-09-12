@@ -168,7 +168,7 @@ def send_epltable(m):
   user_msg = rank
   bot.reply_to(m, user_msg)
 
-@bot.message_handler(regexp="⚽ EPL Results(Last 7 days)")
+@bot.message_handler(regexp="⚽ EPL Results Last 7 days")
 def send_eplscores(m):
   d = date.today()
   user_msg = (str(d) + "\n \n" + EPLSCORES)
@@ -179,7 +179,7 @@ def send_eplscores(m):
 def send_france(m):
     user_markup = telebot.types.ReplyKeyboardMarkup(True, True)
     user_markup.row('⚽ Ligue 1 Scores', '⚽ Ligue 1 Table')
-    user_markup.row('⚽ Ligue 1 Results(Last 7 days)', '👈 Back')
+    user_markup.row('⚽ Ligue 1 Results Last 7 days', '👈 Back')
     cid = m.chat.id
     user_msg = 'French League scores and table.\n\n'
     bot.send_message(cid, user_msg, reply_markup=user_markup, parse_mode="Markdown", disable_web_page_preview="True")
@@ -196,7 +196,7 @@ def send_ligueonetable(m):
   user_msg = rank
   bot.reply_to(m, user_msg)
 
-@bot.message_handler(regexp="⚽ Ligue 1 Results(Last 7 days)")
+@bot.message_handler(regexp="⚽ Ligue 1 Results Last 7 days")
 def send_ligueonescores(m):
   d = date.today()
   user_msg = (str(d) + "\n \n" + ligueonescores)
@@ -207,7 +207,7 @@ def send_ligueonescores(m):
 def send_germany(m):
     user_markup = telebot.types.ReplyKeyboardMarkup(True, True)
     user_markup.row('⚽ Bundesliga Scores', '⚽ Bundesliga Table')
-    user_markup.row('⚽ Bundesliga Results(Last 7 days)', '👈 Back')
+    user_markup.row('⚽ Bundesliga Results Last 7 days', '👈 Back')
     cid = m.chat.id
     user_msg = 'German League scores and table.\n\n'
     bot.send_message(cid, user_msg, reply_markup=user_markup, parse_mode="Markdown", disable_web_page_preview="True")
@@ -224,7 +224,7 @@ def send_bundesligatable(m):
   user_msg = rank
   bot.reply_to(m, user_msg)
 
-@bot.message_handler(regexp="⚽ Bundesliga Results(Last 7 days)")
+@bot.message_handler(regexp="⚽ Bundesliga Results Last 7 days")
 def send_bundesligascores(m):
   d = date.today()
   user_msg = (str(d) + "\n \n" + bundesligascores)
@@ -235,7 +235,7 @@ def send_bundesligascores(m):
 def send_italy(m):
     user_markup = telebot.types.ReplyKeyboardMarkup(True, True)
     user_markup.row('⚽ Serie A Scores', '⚽ Serie A Table')
-    user_markup.row('⚽ Serie A Results(Last 7 days)', '👈 Back')
+    user_markup.row('⚽ Serie A Results Last 7 days', '👈 Back')
     cid = m.chat.id
     user_msg = 'Serie A scores and table.\n\n'
     bot.send_message(cid, user_msg, reply_markup=user_markup, parse_mode="Markdown", disable_web_page_preview="True")
@@ -252,7 +252,7 @@ def send_serieatable(m):
   user_msg = rank
   bot.reply_to(m, user_msg)
 
-@bot.message_handler(regexp="⚽ Serie A Results(Last 7 days)")
+@bot.message_handler(regexp="⚽ Serie A Results Last 7 days")
 def send_serieascores(m):
   d = date.today()
   user_msg = (str(d) + "\n \n" + serieascores)
@@ -263,7 +263,7 @@ def send_serieascores(m):
 def send_spain(m):
     user_markup = telebot.types.ReplyKeyboardMarkup(True, True)
     user_markup.row('⚽ La Liga Scores', '⚽ La Liga Table')
-    user_markup.row('⚽ La Liga A Results(Last 7 days)', '👈 Back')
+    user_markup.row('⚽ La Liga A Results Last 7 days', '👈 Back')
     cid = m.chat.id
     user_msg = 'Spanish League scores and table.\n\n'
     bot.send_message(cid, user_msg, reply_markup=user_markup, parse_mode="Markdown", disable_web_page_preview="True")
@@ -280,7 +280,7 @@ def send_laligatable(m):
   user_msg = rank
   bot.reply_to(m, user_msg)
 
-@bot.message_handler(regexp="⚽ La Liga A Results(Last 7 days)")
+@bot.message_handler(regexp="⚽ La Liga A Results Last 7 days")
 def send_laligascores(m):
   d = date.today()
   user_msg = (str(d) + "\n \n" + laligacores)
@@ -291,7 +291,7 @@ def send_laligascores(m):
 def send_unitedstates(m):
     user_markup = telebot.types.ReplyKeyboardMarkup(True, True)
     user_markup.row('⚽ MLS Scores', '⚽ MLS Table')
-    user_markup.row('⚽ MLS Results(Last 7 days)', '👈 Back')
+    user_markup.row('⚽ MLS Results Last 7 days', '👈 Back')
     cid = m.chat.id
     user_msg = 'MLS scores and table.\n\n'
     bot.send_message(cid, user_msg, reply_markup=user_markup, parse_mode="Markdown", disable_web_page_preview="True")
@@ -308,7 +308,7 @@ def send_mlstable(m):
   user_msg = rank
   bot.reply_to(m, user_msg)
 
-@bot.message_handler(regexp="⚽ MLS Results(Last 7 days)")
+@bot.message_handler(regexp="⚽ MLS Results Last 7 days")
 def send_mlscores(m):
   d = date.today()
   user_msg = (str(d) + "\n \n" + mlscores)

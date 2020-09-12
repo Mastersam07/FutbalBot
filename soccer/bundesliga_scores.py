@@ -44,4 +44,3 @@ def BundesligaScores():
     return('*' * (width + 4) + "{0}".format("\n".join(scores)) + '*' * (width + 4))
 
 bundesligascores = BundesligaScores()
-# print (bundesligascores)

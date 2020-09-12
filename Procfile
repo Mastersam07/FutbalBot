@@ -1,1 +1,1 @@
-  web: gunicorn FutbalBot.wsgi --log-file -
+  web: gunicorn wsgi:app --log-file -

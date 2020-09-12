@@ -95,14 +95,12 @@ def send_welcome(m):
     cursor.execute(select_exist, record_to_insert)
     check = cursor.fetchone()
     if check[0] == False:
-      print("Falsely",check)
       postgres_insert_query = """ INSERT INTO users (userId) VALUES (%s)"""
       cursor.execute(postgres_insert_query, record_to_insert)
       db.commit()
       count = cursor.rowcount
       print (count, "Record inserted successfully into users table")
     else:
-      print("Truly",check)
       count = cursor.rowcount
       print (count, "Record already exists")
     line1 = '`Hi {},` I\'m Footy 🤖!\n\nI provide sports update which includes fixtures, table, scores, news straight to your DM with ease after scraping and exploring the web 😊🚀\n\nAll updates are gotten from\n• [Livescores](livescores.com)\n• [NewsApi](http://newsapi.org)\n\nPress any button below to interact with me. You will love using me to get sports information\n\nMade with ❤️ in 🇳🇬'
@@ -143,7 +141,6 @@ def soccer_back(m):
     user_markup.row('🏴󠁧󠁢󠁥󠁮󠁧󠁿 England', '🇫🇷 France')
     user_markup.row('🇩🇪 Germany', '🇮🇹 Italy')
     user_markup.row('🇪🇸 Spain', '🇺🇸 United States')
-    user_markup.row('⚽ Latest',)
     user_markup.row('👈 Main Menu')
     cid = m.chat.id
     user_msg = 'Return to main soccer options.\n\n'

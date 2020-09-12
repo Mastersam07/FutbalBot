@@ -46,4 +46,3 @@ def BundesligaTable():
   return '\n'.join(table)
 
 bundesligatable = BundesligaTable()
-#print (t)

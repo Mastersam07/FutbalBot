@@ -1,0 +1,15 @@
+# Python
+venv
+*.pyc
+*.pyo
+*.pyd
+venv_dev
+venv_local
+pyvenv.cfg
+__pycache__
+__init__COPY
+Pipfile.lock
+
+# Others
+.vscode
+Procfile

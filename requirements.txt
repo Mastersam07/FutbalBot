@@ -1,0 +1,6 @@
+pyTelegramBotAPI
+requests
+waitress
+urlopen
+beautifulsoup4
+lxml

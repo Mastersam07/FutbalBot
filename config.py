@@ -1,5 +1,5 @@
 import os
-from urllib.parse import urlparse
+import urllib.parse as urlparse
 
 # bot interval and timeout
 bot_interval = 3

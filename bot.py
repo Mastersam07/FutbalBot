@@ -25,7 +25,7 @@ from soccer.ligueone_scores import ligueonescores
 from soccer.ligueone_table import ligueonetable
 from soccer.seriea_table import serieatable
 from soccer.seriea_scores import serieascores
-from flask import Flask, request, jsonify
+# from flask import Flask, request, jsonify
 import psycopg2
 
 try:
@@ -59,11 +59,11 @@ except Exception as error :
 # new bot instance
 bot = telebot.TeleBot(config.api_key)
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
-@app.route("/")
-def index():
-     return 'What\'s good? I am Footy! 🤖'
+# @app.route("/")
+# def index():
+#      return 'What\'s good? I am Footy! 🤖'
 
 def bot_polling():
     while True:
@@ -281,7 +281,7 @@ polling_thread.start()
 
 # keep main program running while bot runs threaded
 if __name__ == "__main__":
-    serve(app)
+    # serve(app)
     while True:
         try:
             sleep(120)

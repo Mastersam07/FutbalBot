@@ -1,1 +1,1 @@
-  web: gunicorn wsgi --log-file -
+web: python3 bot.py

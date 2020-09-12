@@ -6,3 +6,4 @@ beautifulsoup4
 lxml
 Flask
 psycopg2
+gunicorn

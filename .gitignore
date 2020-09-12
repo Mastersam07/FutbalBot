@@ -13,3 +13,4 @@ Pipfile.lock
 # Others
 .vscode
 Procfile
+config.py

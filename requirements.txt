@@ -4,3 +4,5 @@ waitress
 urlopen
 beautifulsoup4
 lxml
+Flask
+psycopg2

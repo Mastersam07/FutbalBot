@@ -151,7 +151,7 @@ def soccer_back(m):
 def send_england(m):
     user_markup = telebot.types.ReplyKeyboardMarkup(True, True)
     user_markup.row('⚽ EPL Scores', '⚽ EPL Table')
-    user_markup.row('⚽ EPL Results(Last 7 days)', '👈 Back')
+    user_markup.row('⚽ EPL Results Last 7 days', '👈 Back')
     cid = m.chat.id
     user_msg = 'English Premier League scores and table.\n\n'
     bot.send_message(cid, user_msg, reply_markup=user_markup, parse_mode="Markdown", disable_web_page_preview="True")

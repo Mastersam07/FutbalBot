@@ -73,7 +73,7 @@ def bot_polling():
         except Exception as ex:
             print("Bot polling failed, restarting in {}sec. Error:\n{}".format(config.bot_timeout, ex))
             bot.stop_polling()
-            sleep(bot_timeout)
+            sleep(config.bot_timeout)
         else:
             bot.stop_polling()
             print("Bot polling loop finished.")

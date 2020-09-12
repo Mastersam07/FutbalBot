@@ -13,6 +13,7 @@ from telebot import types
 from datetime import date
 from datetime import datetime
 from waitress import serve
+from soccer.current_scores import scoreboard
 from soccer.bundesliga_table import bundesligatable
 from soccer.bundesliga_scores import bundesligascores
 from soccer.epltable import t
@@ -126,6 +127,7 @@ def send_soccer(m):
     user_markup.row('🏴󠁧󠁢󠁥󠁮󠁧󠁿 England', '🇫🇷 France')
     user_markup.row('🇩🇪 Germany', '🇮🇹 Italy')
     user_markup.row('🇪🇸 Spain', '🇺🇸 United States')
+    user_markup.row('⚽ Latest',)
     user_markup.row('👈 Main Menu')
     cid = m.chat.id
     user_msg = 'Soccer information from leagues around the world.\n\n'
@@ -137,6 +139,7 @@ def soccer_back(m):
     user_markup.row('🏴󠁧󠁢󠁥󠁮󠁧󠁿 England', '🇫🇷 France')
     user_markup.row('🇩🇪 Germany', '🇮🇹 Italy')
     user_markup.row('🇪🇸 Spain', '🇺🇸 United States')
+    user_markup.row('⚽ Latest',)
     user_markup.row('👈 Main Menu')
     cid = m.chat.id
     user_msg = 'Return to main soccer options.\n\n'
@@ -272,7 +275,29 @@ def send_mlscores(m):
 def send_mlstable(m):
   rank = mlstable
   user_msg = rank
+  bot.reply_to(m, user_msg) # user_markup.row('⚽ Latest',)
+
+# latest section
+# @bot.message_handler(regexp="⚽ Latest")
+# def send_unitedstates(m):
+#     user_markup = telebot.types.ReplyKeyboardMarkup(True, True)
+#     user_markup.row('⚽ MLS Scores', '⚽ MLS Table')
+#     user_markup.row('👈 Back')
+#     cid = m.chat.id
+#     user_msg = 'MLS scores and table.\n\n'
+#     bot.send_message(cid, user_msg, reply_markup=user_markup, parse_mode="Markdown", disable_web_page_preview="True")
+
+@bot.message_handler(regexp="⚽ Latest")
+def send_latestscores(m):
+  d = date.today()
+  user_msg = (str(d) + "\n \n" + scoreboard)
   bot.reply_to(m, user_msg)
+
+# @bot.message_handler(regexp="⚽ MLS Table")
+# def send_mlstable(m):
+#   rank = mlstable
+#   user_msg = rank
+#   bot.reply_to(m, user_msg)
 
 
 polling_thread = threading.Thread(target=bot_polling)
